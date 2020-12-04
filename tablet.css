@@ -1,0 +1,126 @@
+@media (max-width: 1240px) {
+  #topNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 1rem 10%; /* 수정 */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #212529;
+    z-index: 9999999;
+  }
+  #topNav.sticky {
+    padding: 1rem 10%; /* 수정 */
+  }
+  .show_menu_btn {
+    display: block;
+  }
+  .topNav__ul {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 10rem;
+    top: -72px;
+    left: 0;
+    background-color: #212529;
+    text-align: center;
+    /* transition: all 0.5s ease-in-out; */
+    flex-direction: column;
+  }
+  .topNav__ul.open {
+    display: block;
+    top: 72px;
+    transition: all 0.5s ease-in-out;
+    /* animation: cc; */
+    /* animation-duration: 0.5s; */
+    /* animation-fill-mode: forwards; */
+  }
+
+  /*   @keyframes cc {
+    0% {
+      top: -72px;
+    }
+    100% {
+      top: 72px;
+    }
+  } */
+
+  .topNav__li {
+    margin-bottom: 0.8rem;
+  }
+  .topNav__li,
+  .topNav__li > a {
+    display: block;
+    transition: all 0.5s ease-in-out;
+    /* padding: 1.5rem; */
+  }
+  /*   .hide_menu_btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #chk:checked ~ .topNav__ul {
+    top: 0;
+  } */
+
+  /* 
+xwxwx
+xwxqwxqw
+cwcwecwec
+wec
+ */
+  .menuBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /* transition: all 0.5s ease-in-out; */
+    /* border: 3px solid #fff; */
+  }
+  .btn {
+    width: 25px;
+    height: 2px;
+    background: #fed136;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #fed136;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn::before {
+    transform: translateY(-8px);
+  }
+  .btn::after {
+    transform: translateY(8px);
+  }
+
+  /*aanimation*/
+
+  .menuBtn.open .btn {
+    transform: translateX(-25px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menuBtn.open .btn::before {
+    transform: rotate(45deg) translate(17px, -17px);
+  }
+  .menuBtn.open .btn::after {
+    transform: rotate(-45deg) translate(17px, 17px);
+  }
+}
